@@ -5,8 +5,184 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
-    Hello!!! dd
-</body>
-</html>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        /* Remove the navbar's default margin-bottom and rounded borders */ 
+        .navbar {
+          margin-bottom: 0;
+          border-radius: 0;
+        }
+        
+        /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+        .row.content {height: 450px}
+        
+        /* Set gray background color and 100% height */
+        .sidenav {
+          padding-top: 20px;
+          background-color: #f1f1f1;
+          height: 100%;
+        }
+        
+        /* Set black background color, white text and some padding */
+        footer {
+          background-color: #555;
+          color: white;
+          padding: 15px;
+        }
+        
+        /* On small screens, set height to 'auto' for sidenav and grid */
+        @media screen and (max-width: 767px) {
+          .sidenav {
+            height: auto;
+            padding: 15px;
+          }
+          .row.content {height:auto;} 
+        }
+        table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+      </style>
+    </head>
+    <body>
+    
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+          <a class="navbar-brand" href="#">Logo</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+      
+    <div class="container-fluid text-center">    
+      <div class="row content">
+        <div class="col-sm-2 sidenav">
+          <p><a href="#">식단 추가</a></p>
+        </div>
+        <div class="col-sm-8 text-left"> 
+          <h1>오늘의 식단</h1>
+          <h3> 10/9(월)</h3>
+          <table>
+            <tr>
+                <th scope="col">위치</th>
+                <th scope="col">이름</th>
+                <th scope="col">시간</th>
+            </tr>
+            <tr>
+                <td>514 학생회관</td>
+                <td>든든한동</td>
+                <td>
+                    <a href="#">아침</a>
+                    <br>
+                    <a href="#">점심</a>
+                    <br>
+                    <a href="#">저녁</a>
+                </td>
+            </tr>
+            <tr>
+                <td>514 학생회관</td>
+                <td>따스한동</td>
+                <td>
+                    <a href="#">점심</a>
+                    <br>
+                    <a href="#">저녁</a>
+                </td>
+            </tr>
+            <tr>
+                <td>514 학생회관</td>
+                <td>H:plate</td>
+                <td><a href="#">점심</a>
+                    <br>
+                    <a href="#">저녁</a>
+                </td>
+            </tr>
+            <tr>
+                <td>514 학생회관</td>
+                <td>han's deli</td>
+                <td><a href="#">점심</a>
+                    <br>
+                    <a href="#">저녁</a>
+                </td>
+            </tr>
+            <tr>
+                <td>514 맘스키친</td>
+                <td>맘스키친</td>
+                <td>
+                    <a href="#">아침</a>
+                    <br>
+                    <a href="#">점심</a>
+                    <br>
+                    <a href="#">저녁</a>
+                </td>
+            </tr>
+            <tr>
+                <td>511 복지동</td>
+                <td>한동라운지</td>
+                <td> 
+                    <a href="#">점심</a>
+                    <br>
+                    <a href="#">저녁</a>
+                </td>
+            </tr>
+            <tr>
+                <td>302 김영길 그레이스 스쿨</td>
+                <td>더그레이스테이블</td>
+                <td> 
+                    <a href="#">점심</a>
+                    <br>
+                    <a href="#">저녁</a>
+                </td>
+            </tr>
+          </table>
+          <hr>
+          <h3>Test</h3>
+          <p>Lorem ipsum...</p>
+        </div>
+        <div class="col-sm-2 sidenav">
+          <div class="well">
+            <p>ADS</p>
+          </div>
+          <div class="well">
+            <p>ADS</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <footer class="container-fluid text-center">
+      <p>Footer Text</p>
+    </footer>
+    
+    </body>
+    </html>
+    
