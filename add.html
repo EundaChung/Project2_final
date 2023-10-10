@@ -5,42 +5,119 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</head>
-<body>
+    <style>
+        /* Remove the navbar's default margin-bottom and rounded borders */ 
+        .navbar {
+          margin-bottom: 0;
+          border-radius: 0;
+        }
+        
+        /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+        .row.content {height: 495px}
+        
+        /* Set gray background color and 100% height */
+        .sidenav {
+          padding-top: 20px;
+          background-color: #f1f1f1;
+          height: 100%;
+        }
+        
+        /* Set black background color, white text and some padding */
+        footer {
+          background-color: #555;
+          color: white;
+          padding: 15px;
+        }
+        
+        /* On small screens, set height to 'auto' for sidenav and grid */
+        @media screen and (max-width: 767px) {
+          .sidenav {
+            height: auto;
+            padding: 15px;
+          }
+          .row.content {height:auto;} 
+        }
+        table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+      </style>
+    </head>
+    <body>
+    
     <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+        </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
             <li class="active"><a href="./index.html">Home</a></li>
+            
           </ul>
-          
         </div>
       </div>
     </nav>
-    <h2>식단 추가</h2>
-    <textarea id="textarea" name="intro" rows="2" cols="50">
-       식단을 추가해주세요.
-        </textarea>
-        <br>
-    날짜 : <input type="date" name="date"> <br>
-    <label for="location">위치</label>
-            <select name="location" id="location">
-              <option value="514">514 학생회관</option>
-              <option value="514-2">514 맘스키친</option>
-              <option value="511">511 복지동</option>
-              <option value="302">302 김영길 그레이스 스쿨</option>
-            </select>
-            <br>
-    식당 이름 : <input type="text" name="name"> <br>
-    시간 : <br>
-    <input type="checkbox" id="time1" name="time1" value="morning">
-  <label for="time1"> 아침</label><br>
-  <input type="checkbox" id="time2" name="time2" value="lunch">
-  <label for="time2"> 점심</label><br>
-  <input type="checkbox" id="time3" name="time3" value="dinner">
-  <label for="time3"> 저녁</label><br><br>
-
-</body>
-</html>
+      
+    <div class="container-fluid text-center">    
+      <div class="row content">
+        <div class="col-sm-2 sidenav">
+          <p><a href="./add.html">식단 추가</a></p>
+        </div>
+        <div class="col-sm-8 text-left"> 
+            <h1 style="text-align: center; background-color: hsl(0, 0%, 71%); color: white;">식단 추가</h1>
+            
+             <label for="date">날짜</label><br>
+         <input type="date" id="date" name="date"> <br><br>
+         <label for="location">위치</label><br>
+                 <select name="location" id="location">
+                   <option value="514">514 학생회관</option>
+                   <option value="514-2">514 맘스키친</option>
+                   <option value="511">511 복지동</option>
+                   <option value="302">302 김영길 그레이스 스쿨</option>
+                 </select>
+                 <br><br>
+                 <label for="name">식당 이름</label><br>
+         <input type="text" id="name" name="name"> <br><br>
+         시간 : <br>
+         <input type="checkbox" id="time1" name="time1" value="morning">
+       <label for="time1"> 아침</label><br>
+       <input type="checkbox" id="time2" name="time2" value="lunch">
+       <label for="time2"> 점심</label><br>
+       <input type="checkbox" id="time3" name="time3" value="dinner">
+       <label for="time3"> 저녁</label><br><br>
+       
+          <textarea id="textarea" name="intro" rows="2" cols="50">식단을 추가해주세요.
+             </textarea>
+             <br>
+             <input type="submit" value="추가">
+             <input type="reset" value="취소">
+          <hr>
+          <h3>지도</h3>
+          <img src="./image/map.png" width="600" height="300">
+        </div>
+        <div class="col-sm-2 sidenav">
+          <div class="well">
+            <p>추천 메뉴</p>
+          </div>
+         
+        </div>
+      </div>
+    </div>
+    
+    <footer class="container-fluid text-center">
+      <p>Footer Text</p>
+    </footer>
+    
+    </body>
+    </html>
+    

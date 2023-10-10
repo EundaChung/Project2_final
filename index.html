@@ -17,7 +17,7 @@
         }
         
         /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-        .row.content {height: 450px}
+        .row.content {height: 495px}
         
         /* Set gray background color and 100% height */
         .sidenav {
@@ -42,19 +42,24 @@
           .row.content {height:auto;} 
         }
         table {
-  font-family: arial, sans-serif;
+  font-size: 12pt;
   border-collapse: collapse;
   width: 100%;
 }
-
+th{
+    background-color: rgb(231, 231, 231);
+}
 td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
+  border: 2px solid #dddddd;
+  text-align: center;
+  padding: 4px;
+}
+.center {
+    text-align: center;
 }
 
 tr:nth-child(even) {
-  background-color: #dddddd;
+  background-color: #ffffff;
 }
       </style>
     </head>
@@ -68,14 +73,11 @@ tr:nth-child(even) {
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>                        
           </button>
-          <a class="navbar-brand" href="#">Logo</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Contact</a></li>
+            
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
@@ -90,77 +92,77 @@ tr:nth-child(even) {
           <p><a href="./add.html">식단 추가</a></p>
         </div>
         <div class="col-sm-8 text-left"> 
-          <h1>오늘의 식단</h1>
+          <h1 style="text-align: center; background-color: hsl(0, 0%, 71%); color: white;">오늘의 식단</h1>
           <h3> 10/9(월)</h3>
           <table>
             <tr>
-                <th scope="col">위치</th>
-                <th scope="col">이름</th>
+                <th width="40%" scope="col">위치</th>
+                <th width="40%" scope="col">이름</th>
                 <th scope="col">시간</th>
             </tr>
             <tr>
                 <td>514 학생회관</td>
                 <td>든든한동</td>
-                <td>
+                <td class="center">
                     <a href="./view.html">아침</a>
                     <br>
-                    <a href="#">점심</a>
+                    <a href="./view.html">점심</a>
                     <br>
-                    <a href="#">저녁</a>
+                    <a href="./view.html">저녁</a>
                 </td>
             </tr>
             <tr>
                 <td>514 학생회관</td>
                 <td>따스한동</td>
-                <td>
-                    <a href="#">점심</a>
+                <td class="center">
+                    <a href="./view.html">점심</a>
                     <br>
-                    <a href="#">저녁</a>
+                    <a href="./view.html">저녁</a>
                 </td>
             </tr>
             <tr>
                 <td>514 학생회관</td>
                 <td>H:plate</td>
-                <td><a href="#">점심</a>
+                <td class="center"><a href="./view.html">점심</a>
                     <br>
-                    <a href="#">저녁</a>
+                    <a href="./view.html">저녁</a>
                 </td>
             </tr>
             <tr>
                 <td>514 학생회관</td>
                 <td>han's deli</td>
-                <td><a href="#">점심</a>
+                <td class="center"><a href="./view.html">점심</a>
                     <br>
-                    <a href="#">저녁</a>
+                    <a href="./view.html">저녁</a>
                 </td>
             </tr>
             <tr>
                 <td>514 맘스키친</td>
                 <td>맘스키친</td>
-                <td>
-                    <a href="#">아침</a>
+                <td class="center">
+                    <a href="./view.html">아침</a>
                     <br>
-                    <a href="#">점심</a>
+                    <a href="./view.html">점심</a>
                     <br>
-                    <a href="#">저녁</a>
+                    <a href="./view.html">저녁</a>
                 </td>
             </tr>
             <tr>
                 <td>511 복지동</td>
                 <td>한동라운지</td>
-                <td> 
-                    <a href="#">점심</a>
+                <td class="center">
+                    <a href="./view.html">점심</a>
                     <br>
-                    <a href="#">저녁</a>
+                    <a href="./view.html">저녁</a>
                 </td>
             </tr>
             <tr>
                 <td>302 김영길 그레이스 스쿨</td>
                 <td>더그레이스테이블</td>
-                <td> 
-                    <a href="#">점심</a>
+                <td class="center">
+                    <a href="./view.html">점심</a>
                     <br>
-                    <a href="#">저녁</a>
+                    <a href="./view.html">저녁</a>
                 </td>
             </tr>
           </table>
@@ -170,11 +172,9 @@ tr:nth-child(even) {
         </div>
         <div class="col-sm-2 sidenav">
           <div class="well">
-            <p>ADS</p>
+            <p>추천 메뉴</p>
           </div>
-          <div class="well">
-            <p>ADS</p>
-          </div>
+         
         </div>
       </div>
     </div>
