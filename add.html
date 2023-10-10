@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="./index.html">Home</a></li>
+          </ul>
+          
+        </div>
+      </div>
+    </nav>
+    <h2>식단 추가</h2>
+    <textarea id="textarea" name="intro" rows="2" cols="50">
+       식단을 추가해주세요.
+        </textarea>
+        <br>
+    날짜 : <input type="date" name="date"> <br>
+    <label for="location">위치</label>
+            <select name="location" id="location">
+              <option value="514">514 학생회관</option>
+              <option value="514-2">514 맘스키친</option>
+              <option value="511">511 복지동</option>
+              <option value="302">302 김영길 그레이스 스쿨</option>
+            </select>
+            <br>
+    식당 이름 : <input type="text" name="name"> <br>
+    시간 : <br>
+    <input type="checkbox" id="time1" name="time1" value="morning">
+  <label for="time1"> 아침</label><br>
+  <input type="checkbox" id="time2" name="time2" value="lunch">
+  <label for="time2"> 점심</label><br>
+  <input type="checkbox" id="time3" name="time3" value="dinner">
+  <label for="time3"> 저녁</label><br><br>
+
+</body>
+</html>
