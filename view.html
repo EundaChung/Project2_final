@@ -8,6 +8,21 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+        function confirmDelete() {
+            if (confirm("식단을 삭제할까요?")) {
+                window.location.href="./index.html"
+                alert("삭제되었습니다!");
+            } 
+            }
+    </script>
+    <script>
+        function confirmEdit() {
+            if (confirm("식단을 수정할까요?")) {
+                window.location.href="./edit.html"
+            } 
+            }
+    </script>
     <style>
     .bg-1 { 
       background-color: hsl(0, 99%, 71%);
@@ -29,8 +44,8 @@
           <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
               <li class="active"><a href="./index.html">뒤로가기</a></li>
-              <li><a href="./edit.html">수정</a></li>
-              <li><a href="#" onclick="alert('식단을 삭제할까요?')">삭제</a></li>
+              <li><a id="edit" href="#" onclick="confirmEdit()">수정</a></li>
+              <li><a id="delete" href="#" onclick="confirmDelete()">삭제</a></li>
             </ul>
             
           </div>
