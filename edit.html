@@ -5,8 +5,114 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
-    edit!
-</body>
-</html>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+        function confirmDelete() {
+            if (confirm("식단을 삭제할까요?")) {
+                window.location.href="./index.html"
+                alert("삭제되었습니다!");
+            } 
+            }
+    </script>
+    <script>
+        function confirmEdit() {
+            if (confirm("식단을 수정할까요?")) {
+                window.location.href="./edit.html"
+            } 
+            }
+    </script>
+    <script>
+        function addData(){
+            if(validateForm()){
+           alert("식단이 수정되었습니다.")
+            window.location.href="./view.html"
+            }
+            }
+        
+    </script>
+    <script>
+        function validateForm() {
+          let x = document.forms["myForm"]["name"].value;
+          if (x == "") {
+            alert("식당 이름을 작성해주세요.");
+            return false;
+          }
+          else{
+            return true;
+          }
+        }
+        </script>
+    <style>
+    table, th, td {
+  border: 1px solid rgb(41, 41, 41);
+  font-size: 15pt;
+  margin-left: auto; 
+  margin-right: auto;
+  padding: 10px 100px;
+  text-align: center;
+  
+}
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="./index.html">Home</a></li>
+              <li><a id="edit" href="#" onclick="confirmEdit()">수정</a></li>
+              <li><a id="delete" href="#" onclick="confirmDelete()">삭제</a></li>
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
+  
+  <div class="bg-1">
+    <div class="container text-center">
+      <img src="./image/meal.jpeg" width="500" height="350">
+      <h1 width="100%" style= "background-color:rgb(41, 41, 41); color: rgb(255, 255, 255);">식단 수정</h1>
+        </div>
+        <div class="col-sm-8 text-left">             
+            <form name="myForm" onsubmit="return validateForm()">
+             <label for="date">날짜</label><br>
+         <input type="date" id='date' name="date" value="2023-10-03"> <br><br>
+         <label for="location">위치</label><br>
+                 <select name="location" id="location">
+                   <option value="514">514 학생회관</option>
+                   <option value="514-2">514 맘스키친</option>
+                   <option value="511">511 복지동</option>
+                   <option value="302">302 김영길 그레이스 스쿨</option>
+                 </select>
+                 <br><br>
+                 <label for="name">식당 이름</label><br>
+         <input type="text" value = "든든한동" id="name" name="name"> <br><br>
+         시간 : <br>
+         <input type="checkbox" id="time1" name="time1" value="morning">
+       <label for="time1"> 아침</label><br>
+       <input type="checkbox" id="time2" name="time2" value="lunch">
+       <label for="time2"> 점심</label><br>
+       <input type="checkbox" id="time3" name="time3" value="dinner">
+       <label for="time3"> 저녁</label><br><br>
+       
+          <textarea id="textarea" name="intro" rows="5" cols="50">
+            영양닭죽
+            맛살마늘종볶음
+            요구르트
+            깍두기
+             </textarea>
+             <br>
+            </form>
+             <input type="submit" value="수정" onclick="addData()">
+             <input type="reset" value="취소" onclick="alert('취소되었습니다.')">
+          <hr>
+          <h3>지도</h3>
+          <img src="./image/map.png" width="600" height="300">
+        </div>
+    </div>
+  </div>
+  
+  </body>
+  </html>
+  

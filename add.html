@@ -9,6 +9,27 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+        function addData(){
+            if(validateForm()){
+           alert("식단이 추가되었습니다.")
+            window.location.href="./index.html"
+            }
+            }
+        
+    </script>
+    <script>
+        function validateForm() {
+          let x = document.forms["myForm"]["name"].value;
+          if (x == "") {
+            alert("식당 이름을 작성해주세요.");
+            return false;
+          }
+          else{
+            return true;
+          }
+        }
+        </script>
     <style>
         /* Remove the navbar's default margin-bottom and rounded borders */ 
         .navbar {
@@ -76,6 +97,7 @@
         <div class="col-sm-8 text-left"> 
             <h1 style="text-align: center; background-color: hsl(0, 0%, 71%); color: white;">식단 추가</h1>
             
+            <form name="myForm" onsubmit="return validateForm()">
              <label for="date">날짜</label><br>
          <input type="date" id="date" name="date"> <br><br>
          <label for="location">위치</label><br>
@@ -99,8 +121,9 @@
           <textarea id="textarea" name="intro" rows="2" cols="50">식단을 추가해주세요.
              </textarea>
              <br>
-             <input type="submit" value="추가">
-             <input type="reset" value="취소">
+            </form>
+             <input type="submit" value="추가" onclick="addData()">
+             <input type="reset" value="취소" onclick="alert('취소되었습니다.')">
           <hr>
           <h3>지도</h3>
           <img src="./image/map.png" width="600" height="300">
